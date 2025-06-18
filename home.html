@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Asad Abbas</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+        /* Style for active navigation link (optional, could be added with JS) */
+        .nav-link.active {
+            color: #4338ca; /* Indigo-700 */
+            font-weight: bold;
+        }
+        /* General section padding for consistency */
+        section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        /* Specific mobile menu toggle styling */
+        @media (max-width: 1023px) {
+            #mobile-menu-overlay {
+                transition: transform 0.3s ease-out;
+                transform: translateX(100%);
+            }
+            #mobile-menu-overlay.open {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Mobile Menu Button (Hamburger) -->
+    <button id="mobile-menu-button" class="lg:hidden fixed top-4 right-4 z-50 bg-indigo-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 lg:hidden shadow-xl">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-600 hover:text-indigo-700 text-3xl focus:outline-none">
+            &times;
+        </button>
+        <nav class="flex flex-col space-y-6">
+            <a href="#home" class="nav-link text-3xl font-semibold text-gray-700 hover:text-indigo-700 transition-colors duration-200" onclick="closeMobileMenu()">Home</a>
+            <a href="#about" class="nav-link text-3xl font-semibold text-gray-700 hover:text-indigo-700 transition-colors duration-200" onclick="closeMobileMenu()">About</a>
+            <a href="#skills" class="nav-link text-3xl font-semibold text-gray-700 hover:text-indigo-700 transition-colors duration-200" onclick="closeMobileMenu()">Skills</a>
+            <a href="#projects" class="nav-link text-3xl font-semibold text-gray-700 hover:text-indigo-700 transition-colors duration-200" onclick="closeMobileMenu()">Projects</a>
+            <a href="#contact" class="nav-link text-3xl font-semibold text-gray-700 hover:text-indigo-700 transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Desktop Navigation Sidebar -->
+    <nav class="hidden lg:flex fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-8 flex-col items-start space-y-6 z-30">
+        <div class="text-3xl font-extrabold text-indigo-700 mb-8">
+            <a href="#home" class="hover:text-indigo-900 transition-colors duration-200">Asad Abbas</a>
+        </div>
+        <ul class="space-y-4 w-full">
+            <li>
+                <a href="#home" class="nav-link flex items-center space-x-3 text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 p-3 rounded-lg transition-colors duration-200">
+                    <i class="fas fa-home text-xl"></i>
+                    <span class="text-lg">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link flex items-center space-x-3 text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 p-3 rounded-lg transition-colors duration-200">
+                    <i class="fas fa-user text-xl"></i>
+                    <span class="text-lg">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#skills" class="nav-link flex items-center space-x-3 text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 p-3 rounded-lg transition-colors duration-200">
+                    <i class="fas fa-lightbulb text-xl"></i>
+                    <span class="text-lg">Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="nav-link flex items-center space-x-3 text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 p-3 rounded-lg transition-colors duration-200">
+                    <i class="fas fa-laptop-code text-xl"></i>
+                    <span class="text-lg">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link flex items-center space-x-3 text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 p-3 rounded-lg transition-colors duration-200">
+                    <i class="fas fa-envelope text-xl"></i>
+                    <span class="text-lg">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="lg:ml-64 p-4 lg:p-10">
+
+        <!-- Hero Section -->
+        <section id="home" class="bg-white rounded-lg shadow-xl py-16 px-4 text-center mb-10 flex flex-col justify-center min-h-[calc(100vh-80px)] lg:min-h-0">
+            <img
+                src="https://placehold.co/180x180/667eea/ffffff?text=AA"
+                alt="Profile Picture"
+                class="rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-md transform hover:scale-105 transition-transform duration-300"
+            />
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Hi, I'm <span class="text-indigo-700">Asad Abbas</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                A Future Software Engineer
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a
+                    href="https://github.com/asadabbasse2006"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-700 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"
+                >
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a
+                    href="https://linkedin.com/in/asadabbasse2006"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"
+                >
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
+                About Me
+            </h2>
+            <div class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center md:text-left">
+                <p class="mb-4">
+                    Hello! I'm Asad Abbas, a passionate Software Engineering student currently pursuing my degree at COMSATS University Islamabad. I have a growing interest in developing robust and user-friendly applications using Java, JavaFX, and SQL.<br><br>
+                    I'm currently working on real-world academic projects like a Hospital Management System, which has helped me gain hands-on experience in building scalable desktop applications. My journey into tech started with a curiosity about how software can solve everyday problems, and it continues to motivate me as I explore new technologies and development tools. I'm excited to keep learning, building, and growing on my path to becoming a successful software engineer.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book. I'm always eager to learn and grow, and I thrive in collaborative environments where I can contribute to meaningful projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
+                My Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
+                        Java
+                    </h3>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Basic</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>OOP</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
+                        Python
+                    </h3>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Basic</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Still Working</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
+                        Databases
+                    </h3>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>MySQL</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
+                        Tools & Others
+                    </h3>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>GitHub</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>VS Code</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Intellij IDEA</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>MySQL Command Line Client</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
+                My Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="f:\Projects\Icon.png"
+                        alt="Project 1"
+                        class="w-full h-48 object-cover rounded-md mb-4"
+                    />
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Calculator</h3>
+                    <p class="text-gray-700 mb-4 flex-grow">
+                        A small calculator which performs the basic operations like addition, subtraction, ON, OFF, multiplication, division, square, and square root.
+                    </p>
+                    <div class="mb-4">
+                        <span class="font-medium text-gray-800">Technologies: </span>
+                        <span class="text-sm text-gray-600">Java, Java Swing (GUI)</span>
+                    </div>
+                    <div class="flex space-x-4 mt-auto">
+                        <a
+                            href="https://github.com/asadabbasse2006/Calculator"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                        >
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a
+                            href="https://github.com/asadabbasse2006/Calculator"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                        >
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="f:\Projects\Stopwatch\WhatsApp Image 2025-02-27 at 23.30.37_4d337d78.jpg"
+                        alt="Project 2"
+                        class="w-full h-48 object-cover rounded-md mb-4"
+                    />
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Stopwatch</h3>
+                    <p class="text-gray-700 mb-4 flex-grow">
+                        A small stopwatch that can manage the time to be noted. The features of this stopwatch are RESET, CLEAR and NEW.
+                    </p>
+                    <div class="mb-4">
+                        <span class="font-medium text-gray-800">Technologies: </span>
+                        <span class="text-sm text-gray-600">Java, Java Swing(GUI)</span>
+                    </div>
+                    <div class="flex space-x-4 mt-auto">
+                        <a
+                            href="https://github.com/asadabbasse2006/Stopwatch"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                        >
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a
+                            href="https://example-taskapp.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                        >
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="f:\OSK.jpeg"
+                        alt="Project 3"
+                        class="w-full h-48 object-cover rounded-md mb-4"
+                    />
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Hospital Management System</h3>
+                    <p class="text-gray-700 mb-4 flex-grow">
+                        A hospital management system that allows the patient to book an appointment. It controls the admin, patient and doctor portals.
+                    </p>
+                    <div class="mb-4">
+                        <span class="font-medium text-gray-800">Technologies: </span>
+                        <span class="text-sm text-gray-600">Java, JavaFX (GUI),MySQL</span>
+                    </div>
+                    <div class="flex space-x-4 mt-auto">
+                        <a
+                            href="https://github.com/yourusername/blog-site"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                        >
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a
+                            href="https://example-blog.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                        >
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
+                Contact Me
+            </h2>
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                <p class="text-lg text-gray-700 mb-6 text-center">
+                    Have a question or want to work together? Feel free to reach out!
+                </p>
+                <form action="https://formspree.io/f/xnnvzbaw" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
+                            Your Name
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            placeholder="Asad Abbas"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                            Your Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            placeholder="asadse2006@gmail.com"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            placeholder="Your message here..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="w-full bg-indigo-700 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-indigo-600 transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white rounded-lg shadow-xl py-8 px-4 text-center text-gray-600 text-sm mt-10">
+            <p>&copy; 2025 Asad Abbas. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="mailto:asadse2006@gmail.com" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Smooth scrolling for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+
+        // Function to close the mobile menu
+        function closeMobileMenu() {
+            mobileMenuOverlay.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close mobile menu if a navigation link inside it is clicked
+        document.querySelectorAll('#mobile-menu-overlay .nav-link').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Optional: Highlight active navigation link based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
