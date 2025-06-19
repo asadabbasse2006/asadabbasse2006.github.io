@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Asad Abbas</title>
-    <!-- Tailwind CSS CDN for utility-first styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
         /* Custom CSS for a clean look */
         body {
@@ -36,14 +38,12 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-blue-50 text-gray-800">
 
-    <!-- Mobile Menu Button (Hamburger) -->
     <button id="mobile-menu-button" class="lg:hidden fixed top-4 right-4 z-50 bg-indigo-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
         <i class="fas fa-bars text-xl"></i>
     </button>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 lg:hidden shadow-xl">
         <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-600 hover:text-indigo-700 text-3xl focus:outline-none">
             &times;
@@ -57,7 +57,6 @@
         </nav>
     </div>
 
-    <!-- Desktop Navigation Sidebar -->
     <nav class="hidden lg:flex fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-8 flex-col items-start space-y-6 z-30">
         <div class="text-3xl font-extrabold text-indigo-700 mb-8">
             <a href="#home" class="hover:text-indigo-900 transition-colors duration-200">Asad Abbas</a>
@@ -96,28 +95,26 @@
         </ul>
     </nav>
 
-    <!-- Main Content Area -->
     <div class="lg:ml-64 p-4 lg:p-10">
 
-        <!-- Hero Section -->
         <section id="home" class="bg-white rounded-lg shadow-xl py-16 px-4 text-center mb-10 flex flex-col justify-center min-h-[calc(100vh-80px)] lg:min-h-0">
             <img
                 src="https://placehold.co/180x180/667eea/ffffff?text=AA"
                 alt="Profile Picture"
-                class="rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-md transform hover:scale-105 transition-transform duration-300"
+                class="rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-md transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate__animated animate__fadeInDown"
             />
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight animate__animated animate__fadeInDown animate__delay-1s">
                 Hi, I'm <span class="text-indigo-700">Asad Abbas</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-2s">
                 A Future Software Engineer
             </p>
-            <div class="flex justify-center space-x-4">
+            <div class="flex justify-center space-x-4 animate__animated animate__fadeInUp animate__delay-3s">
                 <a
                     href="https://github.com/asadabbasse2006"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-700 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"
+                    class="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-700 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:scale-105"
                 >
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
@@ -126,7 +123,7 @@
                     href="https://linkedin.com/in/asadabbasse2006"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"
+                    class="bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:scale-105"
                 >
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
@@ -134,8 +131,7 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+        <section id="about" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10 animate__animated animate__fadeInUp">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
                 About Me
             </h2>
@@ -150,66 +146,63 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+        <section id="skills" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10 animate__animated animate__fadeInUp">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
                 My Skills
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                     <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
                         Java
                     </h3>
                     <ul class="list-none space-y-2 text-gray-700">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Basic</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>OOP</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Problem Solving</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Basic</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>OOP</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Problem Solving</li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                     <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
                         Python
                     </h3>
                     <ul class="list-none space-y-2 text-gray-700">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Basic</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Still Working</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Problem Solving</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Basic</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Still Working</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Problem Solving</li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                     <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
                         Databases
                     </h3>
                     <ul class="list-none space-y-2 text-gray-700">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>MySQL</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>PostgreSQL</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>MySQL</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>PostgreSQL</li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                     <h3 class="text-xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-300 pb-2">
                         Tools & Others
                     </h3>
                     <ul class="list-none space-y-2 text-gray-700">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>GitHub</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>VS Code</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Intellij IDEA</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>MySQL Command Line Client</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>GitHub</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>VS Code</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>Intellij IDEA</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i>MySQL Command Line Client</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+        <section id="projects" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10 animate__animated animate__fadeInUp">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
                 My Projects
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Project 1 -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <img
-                        src="https://www.google.com/imgres?q=Calculator&imgurl=http%3A%2F%2Fstationers.pk%2Fcdn%2Fshop%2Ffiles%2FCasioOriginalScientificCalculatorFX-991ESPlus-2ndEdition_1_1.jpg%3Fv%3D1689678713&imgrefurl=https%3A%2F%2Fstationers.pk%2Fproducts%2Fcasio-original-scientific-calculator-fx-991es-plus-2nd-edition&docid=xmCT_QIcCRFfkM&tbnid=xbQ_883iyWn_zM&vet=12ahUKEwiD1qWn5vqNAxV1SfEDHSmlFgIQM3oECBgQAA..i&w=2401&h=2401&hcb=2&ved=2ahUKEwiD1qWn5vqNAxV1SfEDHSmlFgIQM3oECBgQAA"
-                        alt="Project 1"
+                        src="https://via.placeholder.com/400x250/667eea/ffffff?text=Calculator"
+                        alt="Calculator Project"
                         class="w-full h-48 object-cover rounded-md mb-4"
                     />
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Calculator</h3>
@@ -225,16 +218,15 @@
                             href="https://github.com/asadabbasse2006/Calculator"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </a>
                         <a
-                            href="https://github.com/asadabbasse2006/Calculator"
-                            target="_blank"
+                            href="https://github.com/asadabbasse2006/Calculator" target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fas fa-external-link-alt"></i>
                             <span>Live Demo</span>
@@ -242,11 +234,10 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <img
-                        src="https://www.google.com/imgres?q=stopwatch&imgurl=https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F2045%2Fstopwatch.svg&imgrefurl=https%3A%2F%2Fwww.svgrepo.com%2Fsvg%2F2045%2Fstopwatch&docid=4oWQn2elUzhHhM&tbnid=xzfbuuzBFT3kcM&vet=12ahUKEwjhyLzT5fqNAxVKA9sEHVsUAtMQM3oECBgQAA..i&w=800&h=800&hcb=2&ved=2ahUKEwjhyLzT5fqNAxVKA9sEHVsUAtMQM3oECBgQAA"
-                        alt="Project 2"
+                        src="https://via.placeholder.com/400x250/667eea/ffffff?text=Stopwatch"
+                        alt="Stopwatch Project"
                         class="w-full h-48 object-cover rounded-md mb-4"
                     />
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Stopwatch</h3>
@@ -262,16 +253,15 @@
                             href="https://github.com/asadabbasse2006/Stopwatch"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </a>
                         <a
-                            href="https://example-taskapp.com"
-                            target="_blank"
+                            href="https://github.com/asadabbasse2006/Stopwatch" target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fas fa-external-link-alt"></i>
                             <span>Live Demo</span>
@@ -279,11 +269,10 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <img
-                        src="https://www.google.com/imgres?q=Hospital&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F038%2F252%2F707%2Fsmall_2x%2Fhospital-building-illustration-medical-clinic-isolated-on-white-background-vector.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fhospital-clipart&docid=ZypDJ9eEAxXxnM&tbnid=G3fwZt1lfzJIRM&vet=12ahUKEwiBkbCW5vqNAxWaRPEDHSKFHEoQM3oECBgQAA..i&w=625&h=400&hcb=2&ved=2ahUKEwiBkbCW5vqNAxWaRPEDHSKFHEoQM3oECBgQAA"
-                        alt="Project 3"
+                        src="https://via.placeholder.com/400x250/667eea/ffffff?text=Hospital+System"
+                        alt="Hospital Management System Project"
                         class="w-full h-48 object-cover rounded-md mb-4"
                     />
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Hospital Management System</h3>
@@ -296,19 +285,17 @@
                     </div>
                     <div class="flex space-x-4 mt-auto">
                         <a
-                            href="https://github.com/yourusername/blog-site"
-                            target="_blank"
+                            href="https://github.com/asadabbasse2006/Hospital-Management-System" target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-indigo-700 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-gray-800 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </a>
                         <a
-                            href="https://example-blog.com"
-                            target="_blank"
+                            href="https://github.com/asadabbasse2006/Hospital-Management-System" target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-indigo-900 font-medium transition-colors duration-200"
+                            class="inline-flex items-center space-x-1 text-indigo-700 hover:text-teal-600 font-medium transition-colors duration-200"
                         >
                             <i class="fas fa-external-link-alt"></i>
                             <span>Live Demo</span>
@@ -318,8 +305,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10">
+        <section id="contact" class="bg-white rounded-lg shadow-xl py-16 px-4 mb-10 animate__animated animate__fadeInUp">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center border-b-4 border-indigo-500 pb-2 inline-block mx-auto">
                 Contact Me
             </h2>
@@ -377,17 +363,16 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="bg-white rounded-lg shadow-xl py-8 px-4 text-center text-gray-600 text-sm mt-10">
             <p>&copy; 2025 Asad Abbas. All rights reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://github.com/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                <a href="https://github.com/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 hover:scale-110 transition-transform duration-200">
                     <i class="fab fa-github text-xl"></i>
                 </a>
-                <a href="https://linkedin.com/in/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                <a href="https://linkedin.com/in/asadabbasse2006" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 hover:scale-110 transition-transform duration-200">
                     <i class="fab fa-linkedin-in text-xl"></i>
                 </a>
-                <a href="mailto:asadse2006@gmail.com" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                <a href="mailto:asadse2006@gmail.com" class="text-gray-600 hover:text-gray-900 hover:scale-110 transition-transform duration-200">
                     <i class="fas fa-envelope text-xl"></i>
                 </a>
             </div>
@@ -441,6 +426,7 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
+                // Adjust this value to control when the active state changes
                 if (pageYOffset >= sectionTop - sectionHeight / 3) {
                     current = section.getAttribute('id');
                 }
